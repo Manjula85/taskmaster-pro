@@ -73,6 +73,14 @@ var auditTask = function(taskEl) {
   }
 };
 
+setInterval(function() {
+  $(".card .list-group-item").each(function(index,el){
+    auditTask(el);
+  });
+}, 5000);
+
+//**************************************************** */
+
 // enable draggable/sortable feature on list-group elements
 $(".card .list-group").sortable({
   // enable dragging across lists
