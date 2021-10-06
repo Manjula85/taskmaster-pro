@@ -54,12 +54,11 @@ var auditTask = function(taskEl) {
     .text()
     .trim();
 
-  console.log(date);
-
   // convert to moment object at 5:00pm
   var time = moment(date, "L").set("hour", 17);
 
-  console.log(time);
+  //testing output
+  console.log(taskEl);
 
   // remove any old classes from element
   $(taskEl).removeClass("list-group-item-warning list-group-item-danger");
@@ -77,7 +76,7 @@ setInterval(function() {
   $(".card .list-group-item").each(function(index,el){
     auditTask(el);
   });
-}, 5000);
+}, (1000 * 60) * 30);
 
 //**************************************************** */
 
